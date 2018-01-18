@@ -1,0 +1,12 @@
+---
+
+  phars:
+    - {
+      tool: "composer"
+      }
+    - {
+      tool: "wp"
+      }
+    # - {
+    #   tool: "custom"
+    #   }

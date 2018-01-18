@@ -1,0 +1,53 @@
+---
+- hosts: www
+  gather_facts: False
+
+  vars:
+    - root_dir: "{{playbook_dir}}"
+    - env: development
+
+
+  pre_tasks:
+    - debug: msg="Pre tasks section"
+
+    - name: ANSIBLE PYTHON | install python 2
+      raw: test -e /usr/bin/python || (apt -qqy update && apt install -qy python-minimal)
+      become: yes
+      tags:
+        - create
+
+    - name:  UNPRIVILEGED USERS | Get acl dependency (ansible unprivileged user operations magic)
+      apt: pkg="acl"
+      become: yes
+      tags:
+        - create
+
+
+    - name: gather facts
+      setup:
+      tags:
+        - always
+
+
+    - name: Include environment related variables
+      include_vars: "{{ item }}"
+      ignore_errors: true
+      with_first_found:
+       - "{{env}}_vars.yml"
+       - "local_vars.yml"
+      tags:
+        - always
+
+
+
+  roles:
+
+      - {
+         role: "sa-php-pharables",
+         phars: "my_phars"
+        }
+
+
+  tasks:
+
+    - debug: msg="Tasks section"
