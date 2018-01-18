@@ -1,0 +1,12 @@
+---
+
+  test_phars:
+    # - {
+    #   tool: "composer"
+    #   }
+    - {
+      tool: "wp"
+      }
+    # - {
+    #   tool: "custom"
+    #   }
