@@ -1,9 +1,9 @@
 ---
 
   test_phars:
-    - {
-      tool: "composer"
-      }
+    # - {
+    #   tool: "composer"
+    #   }
     - {
       tool: "wp"
       }

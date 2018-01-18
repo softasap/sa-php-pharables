@@ -19,6 +19,23 @@
           url: "https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar",
           name: "wp-cli",
           }
+        - {
+          tool: "wp",
+          php_family: "5.6"
+          }
+        - {
+          tool: "custom",
+          phar: "wp-cli.phar",
+          url: "https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar",
+          name: "wp-cli",
+          }
+        - {
+          tool: "custom",
+          phar: "wp-cli.phar",
+          url: "https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar",
+          name: "wp-cli",
+          php_family: "5.6"          
+          }
 
 
   pre_tasks:
