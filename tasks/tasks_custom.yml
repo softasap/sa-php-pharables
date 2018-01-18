@@ -1,7 +1,7 @@
   - name: PHP | Install custom "{{phar_config.phar}} from {{phar_config.url}}"
-    shell: "curl -o /usr/local/bin/{{phar_config.phar}} {{phar_config.url}}"
-    args:
-        creates: "/usr/local/bin/{{phar_config.phar}}{{php_version}}"
+    get_url:
+      url: "{{phar_config.url}}"
+      dest: "/usr/local/bin/{{phar_config.phar}}"
     become: yes
     tags:
       -phar
