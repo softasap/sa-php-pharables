@@ -50,6 +50,7 @@ vars:
         phar: "wp-cli.phar",
         url: "https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar",
         name: "wp-cli",    
+        extra_phar_params: " --require=~/dictator/ "
         }
 
 roles:
