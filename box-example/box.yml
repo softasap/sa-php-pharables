@@ -6,6 +6,20 @@
     - root_dir: "{{playbook_dir}}"
     - env: development
 
+    - my_phars:
+        - {
+          tool: "composer"
+          }
+        - {
+          tool: "wp"
+          }
+        - {
+          tool: "custom",
+          phar: "wp-cli.phar",
+          url: "https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar",
+          name: "wp-cli",
+          }
+
 
   pre_tasks:
     - debug: msg="Pre tasks section"
@@ -44,7 +58,7 @@
 
       - {
          role: "sa-php-pharables",
-         phars: "my_phars"
+         phars: "{{my_phars}}"
         }
 
 
