@@ -1,6 +1,6 @@
 ---
 
-  phars:
+  test_phars:
     - {
       tool: "composer"
       }
