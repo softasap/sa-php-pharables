@@ -2,9 +2,6 @@
     get_url:
       url: "https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar"
       dest: "/usr/local/bin/wp-cli.phar"
-
-    args:
-      creates: "/usr/local/bin/wp{{php_version}}"
     become: yes
     tags:
       -wp
