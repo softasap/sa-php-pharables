@@ -25,7 +25,7 @@ vars:
 roles:
      - {
          role: "sa-php-pharables",
-         phars: "{{my_phars}}"
+         phars: "{{ my_phars }}"
        }
 
 
@@ -56,7 +56,7 @@ vars:
 roles:
      - {
          role: "sa-php-pharables",
-         phars: "{{my_phars}}",
+         phars: "{{ my_phars }}",
          php_family: default # 5.6 | 7.0 | default
        }
 

@@ -3,7 +3,7 @@
   gather_facts: False
 
   vars:
-    - root_dir: "{{playbook_dir}}"
+    - root_dir: "{{ playbook_dir }}"
     - env: development
 
     - my_phars:
@@ -47,7 +47,7 @@
       include_vars: "{{ item }}"
       ignore_errors: true
       with_first_found:
-       - "{{env}}_vars.yml"
+       - "{{ env }}_vars.yml"
        - "local_vars.yml"
       tags:
         - always
@@ -58,11 +58,11 @@
 
       - {
          role: "sa-php-pharables",
-         phars: "{{my_phars}}"
+         phars: "{{ my_phars }}"
         }
       - {
          role: "sa-php-pharables",
-         phars: "{{my_phars}}",
+         phars: "{{ my_phars }}",
          php_family: "5.6"
         }
 
