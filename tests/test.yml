@@ -23,5 +23,6 @@
     - {
         role: "role_under_test",
         docker_test: true,
-        phars: "{{ test_phars }}"
+        phars: "{{ test_phars }}",
+        php_family: "{{ test_php_family }}"
       }

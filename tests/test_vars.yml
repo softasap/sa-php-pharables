@@ -1,5 +1,7 @@
 ---
 
+  test_php_family: "7.0"
+
   test_phars:
      - {
        tool: "composer"
