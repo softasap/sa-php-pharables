@@ -9,6 +9,9 @@
     - {
       tool: "composer"
       }
+    - {
+      tool: "drush"
+      }
     # - {
     #   tool: "wp"
     #   }
