@@ -1,3 +1,9 @@
+  - name: PHP | Install dependencies
+    pkg: name=curl
+    become: yes
+    tags:
+      -composer
+
   - name: PHP | Install composer
     shell: "curl -sS https://getcomposer.org/installer | /usr/bin/php{{ php_version }} -- --install-dir=/usr/local/bin"
     args:
