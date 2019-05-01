@@ -1,5 +1,5 @@
   - name: PHP | Install dependencies
-    pkg: name=curl
+    package: name=curl
     become: yes
     tags:
       -composer
