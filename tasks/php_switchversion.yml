@@ -1,10 +1,29 @@
+  - name: PHP | Fix php family prefix for 7
+    set_fact:
+      php_version: "7.2"
+      php_module_prefix: "php7.2"
+      php_fpm_prefix: "php7.2"
+    when: php_family == "default" or php_family == "7.2" or php_family == 7.2
+    tags:
+      -php
+      -setup
 
   - name: PHP | Fix php family prefix for 7
+    set_fact:
+      php_version: "7.1"
+      php_module_prefix: "php7.1"
+      php_fpm_prefix: "php7.1"
+    when: php_family == "7.1" or php_family == 7.1
+    tags:
+      -php
+      -setup
+
+  - name: PHP | Fix php family prefix for 7.0
     set_fact:
       php_version: "7.0"
       php_module_prefix: "php7.0"
       php_fpm_prefix: "php7.0"
-    when: php_family == "default" or php_family == "7.0" or php_family == 7
+    when: php_family == "7.0" or php_family == 7
     tags:
       -php
       -setup

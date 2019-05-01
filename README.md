@@ -21,11 +21,17 @@ vars:
       - {
         tool: "wp"
         }
+      - {
+        tool: "drush",
+        drush_version: "7.4.0"
+        }
+
 
 roles:
      - {
          role: "sa-php-pharables",
-         phars: "{{ my_phars }}"
+         phars: "{{ my_phars }}",
+         php_family: "7.0"
        }
 
 
@@ -52,6 +58,11 @@ vars:
         name: "wp-cli",    
         extra_phar_params: " --require=~/dictator/ "
         }
+      - {
+        tool: "drush",
+        drush_version: "7.4.0"
+        }
+
 
 roles:
      - {
