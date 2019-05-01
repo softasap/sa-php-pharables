@@ -1,6 +1,6 @@
   - name: PHP | Install drush
     get_url:
-      url: "https://github.com/drush-ops/drush/releases/download/{{ phar_config.version | default('7.4.0') }}/drush.phar"
+      url: "https://github.com/drush-ops/drush/releases/download/{{ phar_config.version | default('8.0.5') }}/drush.phar"
       dest: "/usr/local/bin/drush.phar"
     become: yes
     tags:
